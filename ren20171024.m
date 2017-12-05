@@ -1,7 +1,7 @@
 clc;
 clear;
 
-%采样
+%閲囨牱
 T = 1/(16*50);
 i = 0:T:31*T;
 t = 0:31;
@@ -11,6 +11,6 @@ s2 = 0.5*cos(200*pi*i + pi);
 s3 = 2*cos(300*pi*i - pi/2);
 s = s0 + s1 + s2 + s3; 
 stem(t,s(t + 1))
-title('时域采样');
+title('鏃跺煙閲囨牱');
 xlabel('n');
 ylabel('s(n)');
