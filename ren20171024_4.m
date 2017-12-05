@@ -16,7 +16,7 @@ y1 = CombFilter(s,N,r);
 
 for i = 0:3
     z = zeros(1,48);
-    order = i;            %µÚiÂ·
+    order = i;            %ç¬¬iè·¯
     H = [1 exp(-1j*pi*(N - 1)/N) exp(-1j*2*pi*(N - 1)/N) 0 0 0 0 0 0 0 0 0 0 0 -exp(-1j*14*pi*(N - 1)/N) -exp(-1j*15*pi*(N - 1)/N)];
     y2 = Resonator2(y1,N,r,order,H(order + 1));
     z = z + y2;
@@ -26,8 +26,8 @@ for i = 0:3
     end
     
     i1 = 0:N - 1;
-    subplot(2,2,i + 1),stem(i1,y3(i1 + 1));              %Ê±Óò²¨ÐÎ
-    title(['µÚ',num2str(i+1),'Â·']);
+    subplot(2,2,i + 1),stem(i1,y3(i1 + 1));              %æ—¶åŸŸæ³¢å½¢
+    title(['ç¬¬',num2str(i+1),'è·¯']);
     xlabel('n');
     ylabel('s(n)');
 end
